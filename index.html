@@ -3,24 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Baiyu | AI Research Tools Portfolio</title>
+    <title>研途喵 | AI Research Assistant Portfolio</title>
     <meta
       name="description"
-      content="AI research assistant portfolio: research profiling, paper search, reading support, knowledge base, hotspot monitoring, direction analysis, and scholar tracking."
+      content="研途喵科研智能体作品集：面向高校科研全过程的知识管理、论文阅读、热点监测、方向分析和科研画像平台。"
     />
-    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="portfolio.css?v=20260728-agent" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Portfolio home">
         <img src="portfolio-assets/meowscholar-avatar.png" alt="" />
-        <span>Baiyu Portfolio</span>
+        <span>MeowScholar</span>
       </a>
       <nav class="top-nav" aria-label="Portfolio sections">
-        <a href="#about">About</a>
-        <a href="#project">项目</a>
-        <a href="#modules">模块</a>
-        <a href="#stack">技术</a>
+        <a href="#why">为什么做</a>
+        <a href="#how">怎么做</a>
+        <a href="#hard">难点</a>
+        <a href="#outcome">效果</a>
+        <a href="#gallery">截图</a>
         <a href="#links">链接</a>
       </nav>
     </header>
@@ -28,129 +29,168 @@
     <main id="top">
       <section class="hero-section" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">AI Research Tools / Product Prototype</p>
-          <h1 id="hero-title">科研画像助手作品集</h1>
+          <p class="eyebrow">AI Agent / Research Workflow Platform</p>
+          <h1 id="hero-title"><span>研途喵：</span><span>面向科研全过程的</span><span>AI 助手</span></h1>
           <p class="hero-lead">
-            一个面向科研全过程的智能工作台原型，串联科研画像、论文检索、论文阅读、知识库沉淀、热点监测、研究方向分析与学者追踪。
+            从“帮我读一篇论文”扩展到“陪我完成一段科研旅程”：研途喵将论文检索、论文伴读、知识入库、热点监测、方向分析、学者追踪和科研画像串成一个可持续沉淀的科研工作台。
           </p>
           <div class="hero-actions" id="links">
-            <a class="primary-action" href="https://github.com/bai9yu/fcl" target="_blank" rel="noreferrer">
-              查看 GitHub 代码
-            </a>
-            <a class="secondary-action" href="#project">查看项目概览</a>
+            <a class="primary-action" href="https://github.com/bai9yu/fcl" target="_blank" rel="noreferrer">查看 GitHub 代码</a>
+            <a class="secondary-action" href="#gallery">查看功能效果</a>
+          </div>
+          <div class="hero-metrics" aria-label="Project metrics">
+            <div><strong>10</strong><span>典型科研场景</span></div>
+            <div><strong>7</strong><span>核心功能模块</span></div>
+            <div><strong>67</strong><span>师生需求调研</span></div>
           </div>
         </div>
-        <div class="hero-visual" aria-label="Research assistant workflow overview">
-          <div class="orbit-card main-card">
-            <img src="portfolio-assets/meowscholar-avatar.png" alt="MeowScholar project avatar" />
-            <strong>MeowScholar</strong>
-            <span>科研辅助智能体工作台</span>
-          </div>
-          <div class="orbit-card card-a">论文检索</div>
-          <div class="orbit-card card-b">AI 伴读</div>
-          <div class="orbit-card card-c">知识沉淀</div>
-          <div class="orbit-card card-d">热点追踪</div>
-        </div>
+        <figure class="hero-shot">
+          <img src="portfolio-assets/research-agent/profile-dashboard.jpg" alt="研途喵科研画像页面截图" />
+          <figcaption>科研画像将论文阅读、知识库、组会和项目进展汇总为状态判断与行动建议。</figcaption>
+        </figure>
       </section>
 
-      <section class="about-section" id="about" aria-labelledby="about-title">
+      <section class="section why-section" id="why" aria-labelledby="why-title">
         <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">为什么做这个项目</h2>
-        </div>
-        <div class="about-layout">
-          <article class="about-copy">
-            <p>
-              科研工作并不是单点任务，而是一条持续积累的链路：确定方向、查找论文、阅读理解、记录组会、推进项目、观察热点，再把这些内容沉淀为可复用的知识。
-              这个项目尝试把这些分散动作放进同一套界面里，让研究者能够更清楚地看到自己的科研状态和下一步行动。
-            </p>
-            <p>
-              在实现上，项目没有把智能体能力直接暴露给前端，而是通过后端服务层统一处理 Coze 返回内容，把不同工作流的 Markdown、JSON 字符串和嵌套字段清洗成稳定的数据结构。
-              前端因此可以专注于流程组织、状态保存和结果展示。
-            </p>
-          </article>
-          <div class="about-points" aria-label="Project highlights">
-            <div>
-              <strong>连续流程</strong>
-              <span>从画像、检索、阅读到知识库沉淀，模块之间可以顺畅衔接。</span>
-            </div>
-            <div>
-              <strong>结构化输出</strong>
-              <span>后端对智能体结果做归一化，降低前端展示和后续扩展成本。</span>
-            </div>
-            <div>
-              <strong>可演示原型</strong>
-              <span>保留完整页面、接口、文档和演示脚本，方便复盘产品设计与工程实现。</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="overview-grid" id="project" aria-labelledby="project-title">
-        <div class="section-heading">
-          <p class="eyebrow">Featured Project</p>
-          <h2 id="project-title">研途喵：科研画像与智能辅助平台</h2>
-        </div>
-        <article class="summary-panel">
-          <h3>项目定位</h3>
+          <p class="eyebrow">Why</p>
+          <h2 id="why-title">为什么做这个项目</h2>
           <p>
-            该项目以 FastAPI + 原生前端为基础，将多类科研场景统一进一个连续工作流：先识别个人科研状态，再辅助找论文、读论文、沉淀知识，并进一步观察方向热点和学者成果。
+            现有科研 AI 工具大多解决一次检索、一次阅读或一次问答。真实科研更像一条长期链路：选题、找文献、读论文、记组会、推进项目、看热点，再把过程沉淀成自己的科研资产。
           </p>
-        </article>
-        <article class="summary-panel">
-          <h3>我的工作</h3>
-          <p>
-            完成前后端页面组织、接口设计、Coze 智能体结果归一化、跨页面状态衔接、论文阅读与知识库流程联动，以及演示文档和视频脚本整理。
-          </p>
-        </article>
-        <article class="summary-panel">
-          <h3>项目亮点</h3>
-          <p>
-            项目集中体现了产品闭环设计、AI 工作流集成、前端交互落地、后端接口封装，以及对科研使用场景的结构化理解。
-          </p>
-        </article>
-      </section>
-
-      <section class="module-section" id="modules" aria-labelledby="modules-title">
-        <div class="section-heading">
-          <p class="eyebrow">Product Modules</p>
-          <h2 id="modules-title">从科研状态到知识沉淀的完整链路</h2>
         </div>
-        <div class="module-grid">
-          <article class="module-card">
+        <div class="problem-grid">
+          <article>
             <span>01</span>
-            <h3>科研画像</h3>
-            <p>汇总科研阶段、研究方向、论文阅读、项目推进等信息，生成状态判断和下一步建议。</p>
+            <h3>资料分散</h3>
+            <p>论文、组会、项目材料和本地笔记分布在不同工具中，后续复盘和复用成本高。</p>
           </article>
-          <article class="module-card">
+          <article>
             <span>02</span>
-            <h3>论文检索</h3>
-            <p>围绕研究方向返回候选论文、推荐理由和检索概述，减少人工筛选成本。</p>
+            <h3>整理低效</h3>
+            <p>论文阅读、摘要提炼、推荐排序和热点归纳依赖人工反复筛选，容易消耗大量前期时间。</p>
           </article>
-          <article class="module-card">
+          <article>
             <span>03</span>
-            <h3>论文阅读</h3>
-            <p>支持论文上传、基础信息提取、五维评价、原文预览和 AI 伴读问答。</p>
+            <h3>知识难沉淀</h3>
+            <p>单次问答结果很难转化成可检索、可追踪、可继续支撑方向分析的结构化知识。</p>
           </article>
-          <article class="module-card">
+          <article>
             <span>04</span>
-            <h3>知识库</h3>
-            <p>将论文、组会、项目材料整理成可回顾的结构化知识条目。</p>
-          </article>
-          <article class="module-card">
-            <span>05</span>
-            <h3>热点监测</h3>
-            <p>根据方向生成热点概况、主题划分、关键发现和外部代表性链接。</p>
-          </article>
-          <article class="module-card">
-            <span>06</span>
-            <h3>方向与学者追踪</h3>
-            <p>分析研究方向结构、创新切入点，并追踪相关学者和成果线索。</p>
+            <h3>进展难追踪</h3>
+            <p>阅读情况、项目推进、组会反馈缺少统一汇总，学生很难快速判断当前科研阶段和下一步行动。</p>
           </article>
         </div>
       </section>
 
-      <section class="stack-section" id="stack" aria-labelledby="stack-title">
+      <section class="section approach-section" id="how" aria-labelledby="how-title">
+        <div class="section-heading">
+          <p class="eyebrow">How</p>
+          <h2 id="how-title">怎么做：总控智能体调度多工作流</h2>
+          <p>
+            系统以自然语言需求为入口，由总控智能体完成意图识别、参数补齐、变量管理和工作流调度；后端服务层统一解析 Coze 智能体输出，前端以稳定结构展示结果并承接下一步操作。
+          </p>
+        </div>
+        <div class="flow-board" aria-label="System workflow">
+          <div class="flow-node input">用户输入<br /><small>自然语言 / PDF / 链接</small></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node control">总控智能体<br /><small>意图识别 / 参数补齐 / 调度</small></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node workflows">科研工作流<br /><small>检索、伴读、入库、画像、追踪</small></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node output">结构化输出<br /><small>JSON / 报告 / 图表 / 页面</small></div>
+        </div>
+        <div class="method-grid">
+          <article>
+            <h3>前端工作台</h3>
+            <p>提供科研画像、论文检索、论文阅读、知识库、热点监测、方向分析和学者追踪页面，支持跨页面状态衔接。</p>
+          </article>
+          <article>
+            <h3>数据库与记忆层</h3>
+            <p>围绕学生、论文、知识库、组会、项目、热点和方向结果建立结构化记录，为后续复用提供依据。</p>
+          </article>
+          <article>
+            <h3>统一数据出口</h3>
+            <p>智能体返回内容经过后端归一化，避免 Markdown、JSON 字符串和嵌套字段直接散落到前端逻辑中。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section challenge-section" id="hard" aria-labelledby="hard-title">
+        <div class="section-heading">
+          <p class="eyebrow">Difficulties</p>
+          <h2 id="hard-title">难点是什么</h2>
+        </div>
+        <div class="challenge-list">
+          <article>
+            <strong>多工作流衔接</strong>
+            <p>论文推荐结果要能继续进入论文阅读，论文解析结果要能继续问答和入库，热点与知识库内容还要反哺方向分析。难点不在单个页面，而在模块之间的状态承接。</p>
+          </article>
+          <article>
+            <strong>智能体输出稳定性</strong>
+            <p>大模型可能返回 Markdown、半结构化文本或嵌套 JSON。项目通过服务层做字段清洗、容错解析和统一返回，让前端获得可渲染的数据结构。</p>
+          </article>
+          <article>
+            <strong>科研语义结构化</strong>
+            <p>论文、项目、组会材料格式不同，需要抽取创新点、系统模型、算法、数据集、老师建议、项目进展等不同粒度的信息，并统一进入知识库。</p>
+          </article>
+          <article>
+            <strong>展示与可用性平衡</strong>
+            <p>页面既要保留论文原文、AI 评价、图表链接和报告内容，又要让用户快速判断重点，因此前端采用分区、卡片、标签和结果摘要组织信息。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section outcome-section" id="outcome" aria-labelledby="outcome-title">
+        <div class="section-heading">
+          <p class="eyebrow">Outcome</p>
+          <h2 id="outcome-title">效果如何</h2>
+          <p>
+            项目已形成可演示的科研工作台原型，覆盖从“外部信息获取”到“个人科研画像”的完整链路，适用于选题调研、组会准备、论文阅读、项目推进和成果整理等场景。
+          </p>
+        </div>
+        <div class="outcome-layout">
+          <figure>
+            <img src="portfolio-assets/research-agent/paper-reading.jpg" alt="研途喵论文阅读与伴读页面截图" />
+          </figure>
+          <div class="outcome-copy">
+            <div><strong>提升科研效率</strong><span>热点监测、论文推荐和方向分析减少重复搜索与手动整理时间。</span></div>
+            <div><strong>促进知识沉淀</strong><span>论文、组会、项目材料统一入库，形成可检索、可复用的科研资产。</span></div>
+            <div><strong>支撑过程管理</strong><span>科研画像汇总阅读、收藏、项目和组会记录，输出阶段状态与行动建议。</span></div>
+            <div><strong>服务高校场景</strong><span>面向学生选题、教师指导、课题组资料管理和阶段性汇报等真实需求。</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <p class="eyebrow">Product Screens</p>
+          <h2 id="gallery-title">功能效果展示</h2>
+        </div>
+        <div class="screen-grid">
+          <article class="screen-card wide">
+            <img src="portfolio-assets/research-agent/paper-search.jpg" alt="论文检索页面截图" />
+            <div><h3>论文检索推荐</h3><p>按研究方向检索候选论文，生成中文摘要、推荐理由和阅读优先级，并衔接后续论文阅读。</p></div>
+          </article>
+          <article class="screen-card">
+            <img src="portfolio-assets/research-agent/knowledge-base.jpg" alt="科研知识库页面截图" />
+            <div><h3>科研知识库</h3><p>将论文、项目和组会材料结构化入库，支持历史查询和分类展示。</p></div>
+          </article>
+          <article class="screen-card">
+            <img src="portfolio-assets/research-agent/hotspot-monitoring.jpg" alt="热点监测页面截图" />
+            <div><h3>热点监测</h3><p>围绕方向检索外部动态，生成热点主题、趋势图表和分析报告。</p></div>
+          </article>
+          <article class="screen-card">
+            <img src="portfolio-assets/research-agent/direction-analysis.jpg" alt="研究方向分析页面截图" />
+            <div><h3>研究方向分析</h3><p>综合热点、论文推荐和知识库内容，输出方向概况、关键挑战与创新点建议。</p></div>
+          </article>
+          <article class="screen-card">
+            <img src="portfolio-assets/research-agent/scholar-tracking.jpg" alt="学者追踪页面截图" />
+            <div><h3>学者追踪</h3><p>按学者和研究领域整理代表论文、年份、来源、摘要与链接。</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section stack-section" id="stack" aria-labelledby="stack-title">
         <div class="section-heading">
           <p class="eyebrow">Implementation</p>
           <h2 id="stack-title">技术实现与工程结构</h2>
@@ -162,14 +202,13 @@
             <span>Vanilla JavaScript</span>
             <span>CSS</span>
             <span>Coze Agent API</span>
+            <span>JSON Normalization</span>
             <span>LocalStorage</span>
             <span>Python Service Layer</span>
           </div>
           <div class="repo-panel">
             <h3>代码仓库</h3>
-            <p>
-              源码已迁移到 GitHub。仓库中保留了后端服务、页面模板、静态脚本、样式文件、接口文档和环境变量模板。
-            </p>
+            <p>仓库保留后端服务、页面模板、静态脚本、样式文件、接口文档和环境变量模板。作品集页用于展示项目背景、实现思路和可视化效果。</p>
             <a href="https://github.com/bai9yu/fcl" target="_blank" rel="noreferrer">打开仓库</a>
           </div>
         </div>
@@ -177,7 +216,7 @@
     </main>
 
     <footer class="site-footer">
-      <span>Baiyu Portfolio</span>
+      <span>MeowScholar / 研途喵</span>
       <a href="https://github.com/bai9yu/fcl" target="_blank" rel="noreferrer">github.com/bai9yu/fcl</a>
     </footer>
   </body>
