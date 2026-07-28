@@ -152,8 +152,7 @@ h1 span {
 }
 
 .primary-action,
-.secondary-action,
-.repo-panel a {
+.secondary-action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -163,8 +162,7 @@ h1 span {
   font-weight: 900;
 }
 
-.primary-action,
-.repo-panel a {
+.primary-action {
   background: var(--ink);
   color: #fff;
   box-shadow: 0 16px 36px rgba(23, 32, 29, 0.18);
@@ -233,7 +231,6 @@ h1 span {
 }
 
 .section-heading {
-  max-width: 940px;
   margin-bottom: 28px;
 }
 
@@ -281,8 +278,7 @@ h1 span {
 
 .problem-grid h3,
 .method-grid h3,
-.screen-card h3,
-.repo-panel h3 {
+.screen-card h3 {
   margin: 14px 0 10px;
   font-size: 22px;
 }
@@ -290,8 +286,7 @@ h1 span {
 .problem-grid p,
 .method-grid p,
 .challenge-list p,
-.screen-card p,
-.repo-panel p {
+.screen-card p {
   margin: 0;
   color: var(--muted);
   line-height: 1.75;
@@ -363,8 +358,7 @@ h1 span {
   color: #fff;
 }
 
-.challenge-section .eyebrow,
-.stack-section .eyebrow {
+.challenge-section .eyebrow {
   color: #9ed3b7;
 }
 
@@ -444,44 +438,6 @@ h1 span {
   margin-top: 0;
 }
 
-.stack-section {
-  background: #17201d;
-  color: #fff;
-}
-
-.stack-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
-  gap: 24px;
-  align-items: start;
-}
-
-.stack-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.stack-list span {
-  padding: 13px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.86);
-  font-weight: 800;
-}
-
-.repo-panel {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fbfcf7;
-  color: var(--ink);
-  padding: 24px;
-}
-
-.repo-panel a {
-  margin-top: 22px;
-}
 
 .site-footer {
   display: flex;
@@ -499,8 +455,7 @@ h1 span {
 }
 
 @media (max-width: 1080px) {
-  .hero-section,
-  .stack-layout {
+  .hero-section {
     grid-template-columns: 1fr;
   }
 
@@ -574,9 +529,6 @@ h1 span {
     grid-template-columns: 1fr;
   }
 
-  .screen-card.wide {
-    grid-column: auto;
-  }
 
   .site-footer {
     flex-direction: column;
