@@ -250,6 +250,7 @@ h1 {
   color: var(--gold);
 }
 
+.about-section,
 .overview-grid,
 .module-section,
 .stack-section {
@@ -268,11 +269,71 @@ h1 {
   letter-spacing: 0;
 }
 
+.about-section {
+  background: #ffffff;
+  border-top: 1px solid var(--line);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.about-copy,
+.about-points {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(251, 252, 247, 0.82);
+  padding: 28px;
+}
+
+.about-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.86;
+}
+
+.about-copy p + p {
+  margin-top: 18px;
+}
+
+.about-points {
+  display: grid;
+  gap: 16px;
+  background: #17201d;
+  color: #fff;
+}
+
+.about-points div {
+  display: grid;
+  gap: 7px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.about-points div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.about-points strong {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.about-points span {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.72;
+}
+
 .overview-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  background: #ffffff;
+  background: #f7faf5;
 }
 
 .overview-grid .section-heading {
@@ -383,6 +444,7 @@ h1 {
 
 @media (max-width: 980px) {
   .hero-section,
+  .about-layout,
   .overview-grid,
   .module-grid,
   .stack-layout {

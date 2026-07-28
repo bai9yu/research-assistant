@@ -17,6 +17,7 @@
         <span>Baiyu Portfolio</span>
       </a>
       <nav class="top-nav" aria-label="Portfolio sections">
+        <a href="#about">About</a>
         <a href="#project">项目</a>
         <a href="#modules">模块</a>
         <a href="#stack">技术</a>
@@ -52,6 +53,39 @@
         </div>
       </section>
 
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">为什么做这个项目</h2>
+        </div>
+        <div class="about-layout">
+          <article class="about-copy">
+            <p>
+              科研工作并不是单点任务，而是一条持续积累的链路：确定方向、查找论文、阅读理解、记录组会、推进项目、观察热点，再把这些内容沉淀为可复用的知识。
+              这个项目尝试把这些分散动作放进同一套界面里，让研究者能够更清楚地看到自己的科研状态和下一步行动。
+            </p>
+            <p>
+              在实现上，项目没有把智能体能力直接暴露给前端，而是通过后端服务层统一处理 Coze 返回内容，把不同工作流的 Markdown、JSON 字符串和嵌套字段清洗成稳定的数据结构。
+              前端因此可以专注于流程组织、状态保存和结果展示。
+            </p>
+          </article>
+          <div class="about-points" aria-label="Project highlights">
+            <div>
+              <strong>连续流程</strong>
+              <span>从画像、检索、阅读到知识库沉淀，模块之间可以顺畅衔接。</span>
+            </div>
+            <div>
+              <strong>结构化输出</strong>
+              <span>后端对智能体结果做归一化，降低前端展示和后续扩展成本。</span>
+            </div>
+            <div>
+              <strong>可演示原型</strong>
+              <span>保留完整页面、接口、文档和演示脚本，方便复盘产品设计与工程实现。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="overview-grid" id="project" aria-labelledby="project-title">
         <div class="section-heading">
           <p class="eyebrow">Featured Project</p>
@@ -70,9 +104,9 @@
           </p>
         </article>
         <article class="summary-panel">
-          <h3>展示价值</h3>
+          <h3>项目亮点</h3>
           <p>
-            面试官可以从这个项目看到产品闭环设计、AI 工作流集成、前端交互落地、后端接口封装，以及对科研使用场景的结构化理解。
+            项目集中体现了产品闭环设计、AI 工作流集成、前端交互落地、后端接口封装，以及对科研使用场景的结构化理解。
           </p>
         </article>
       </section>

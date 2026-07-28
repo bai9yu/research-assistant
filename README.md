@@ -1,16 +1,47 @@
 # 科研画像助手
 
-## 面试官访问入口
+## About
 
-- 作品集网页：`https://bai9yu.github.io/fcl/`
-- GitHub 代码仓库：`https://github.com/bai9yu/fcl`
+科研画像助手是一个面向科研全过程的 AI 辅助工作台原型。项目希望把科研中常见的分散任务串成一条连续链路：先理解个人科研状态，再辅助论文检索、论文阅读、知识沉淀、热点观察、方向分析和学者追踪。
 
-> 如果作品集网页暂时打不开，请在 GitHub 仓库的 `Settings → Pages` 中选择 `Deploy from a branch`，分支选择 `main`，目录选择 `/root`。
+项目采用 FastAPI + Jinja2 + 原生 JavaScript 实现，后端通过服务层对 Coze 智能体返回内容进行归一化处理，前端负责页面流程、跨页面状态衔接和可视化展示。
+
+## 项目链接
+
+- 项目展示页：`https://bai9yu.github.io/fcl/`
+- 代码仓库：`https://github.com/bai9yu/fcl`
+
+## 功能模块
+
+- 科研画像：根据科研阶段、方向、论文阅读和项目推进情况生成状态概览与行动建议。
+- 论文检索：围绕研究方向生成候选论文、推荐理由和检索概述。
+- 论文阅读：支持论文上传、基础信息提取、五维评价、原文预览和 AI 伴读问答。
+- 知识库：将论文、组会和项目材料沉淀为结构化知识条目。
+- 热点监测：生成方向热点概况、主题划分、关键发现和外部代表性链接。
+- 研究方向：分析方向发展阶段、关键问题和可能的创新切入点。
+- 学者追踪：围绕学者整理论文成果与研究线索。
+
+## 工程结构
+
+```text
+.
+├── main.py                 # FastAPI 应用入口与路由
+├── services/               # 智能体调用、字段解析和业务封装
+├── templates/              # Jinja2 页面模板
+├── static/                 # 页面脚本、样式和项目资源
+├── docs/                   # 前后端对接说明与演示脚本
+├── index.html              # GitHub Pages 静态展示页
+├── portfolio.css           # 展示页样式
+├── requirements.txt        # Python 依赖
+└── .env.example            # 环境变量模板
+```
 
 ## 启动
 
 ```bash
+python -m venv agent
 source agent/bin/activate
+pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
