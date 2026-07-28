@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>论文检索</title>
+    <link rel="stylesheet" href="/static/style.css?v=20260620i" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="side-nav">
+        <div class="brand-block">
+          <div class="brand-mark"><img src="/static/meowscholar-avatar.png" alt="研途喵头像" /></div>
+          <div class="brand-copy">
+            <strong>研途喵</strong>
+            <span>MeowScholar</span>
+          </div>
+        </div>
+        <nav class="nav-stack">
+          <a class="nav-link" href="/profile"><span>◌</span>科研画像</a>
+          <a class="nav-link active" href="/paper-search"><span>⌕</span>论文检索</a>
+          <a class="nav-link" href="/paper"><span>▣</span>论文阅读</a>
+          <a class="nav-link" href="/knowledge"><span>☰</span>知识库</a>
+          <a class="nav-link" href="/hotspot"><span>✦</span>热点监测</a>
+          <a class="nav-link" href="/direction"><span>↗</span>研究方向</a>
+          <a class="nav-link" href="/scholar"><span>◎</span>学者追踪</a>
+        </nav>
+        <div class="side-note">
+          <strong>论文检索说明</strong>
+          <p>输入一个方向或关键词，研途喵会帮你从茫茫论文里挑出更相关、更值得读的几篇。</p>
+          <div class="side-note-actions">
+            <button class="clear-all-btn" type="button" data-clear-app-state>一键清空</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="page">
+        <header class="hero">
+          <div class="hero-copy">
+            <div class="hero-badge">Paper Search Workspace</div>
+            <h1>论文检索</h1>
+            <p>把你的研究问题交给我喵～</p>
+          </div>
+        </header>
+
+        <main class="stack-layout">
+          <article class="card search-panel soft-panel">
+            <div class="section-head compact-head">
+              <h3>🔎 输入研究方向</h3>
+              <span class="section-tag">Search</span>
+            </div>
+            <div class="paper-search-form-grid">
+              <label class="input-group paper-search-input-group">
+                <span>研究方向</span>
+                <input
+                  id="paperSearchDirectionInput"
+                  type="text"
+                  placeholder="例如：语义通信"
+                  value="语义通信"
+                />
+              </label>
+              <button id="paperSearchBtn" class="paper-search-submit">开始论文检索</button>
+              <p class="soft-tip paper-search-helper-tip">输入一个研究方向，研途喵会帮你筛出更相关、更值得读的论文。</p>
+            </div>
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>🧭 检索概述</h3>
+              <span class="section-tag">Overview</span>
+            </div>
+            <section class="planning-block">
+              <div id="paperSearchOverview" class="hotspot-markdown-block">请输入研究方向后开始检索</div>
+            </section>
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>📄 推荐论文</h3>
+              <span class="section-tag">Papers</span>
+            </div>
+            <div id="recommendedPaperList" class="scholar-paper-list">
+              <div class="result-empty">暂无推荐论文，请先输入研究方向并发起检索</div>
+            </div>
+          </article>
+
+        </main>
+
+        <p id="statusMessage" class="status"></p>
+      </div>
+    </div>
+
+    <script src="/static/app_shell.js?v=20260620i"></script>
+    <script src="/static/paper_search.js?v=20260620i"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学者追踪</title>
+    <link rel="stylesheet" href="/static/style.css?v=20260620h" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="side-nav">
+        <div class="brand-block">
+          <div class="brand-mark"><img src="/static/meowscholar-avatar.png" alt="研途喵头像" /></div>
+          <div class="brand-copy">
+            <strong>研途喵</strong>
+            <span>MeowScholar</span>
+          </div>
+        </div>
+        <nav class="nav-stack">
+          <a class="nav-link" href="/profile"><span>◌</span>科研画像</a>
+          <a class="nav-link" href="/paper-search"><span>⌕</span>论文检索</a>
+          <a class="nav-link" href="/paper"><span>▣</span>论文阅读</a>
+          <a class="nav-link" href="/knowledge"><span>☰</span>知识库</a>
+          <a class="nav-link" href="/hotspot"><span>✦</span>热点监测</a>
+          <a class="nav-link" href="/direction"><span>↗</span>研究方向</a>
+          <a class="nav-link active" href="/scholar"><span>◎</span>学者追踪</a>
+        </nav>
+        <div class="side-note">
+          <strong>学者追踪说明</strong>
+          <p>输入学者姓名，研途喵会帮你整理近期论文和研究线索，陪你悄悄跟上学术前沿。</p>
+          <div class="side-note-actions">
+            <button class="clear-all-btn" type="button" data-clear-app-state>一键清空</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="page">
+        <header class="hero">
+          <div class="hero-copy">
+            <div class="hero-badge">Scholar Tracking Workspace</div>
+            <h1>学者追踪</h1>
+            <p>关注的学者有新动向了吗？</p>
+          </div>
+        </header>
+
+        <main class="stack-layout">
+          <article class="card search-panel soft-panel">
+            <div class="section-head compact-head">
+              <h3>👤 查询参数</h3>
+              <span class="section-tag">Scholar</span>
+            </div>
+            <div class="scholar-form-grid">
+              <label class="input-group">
+                <span>学者姓名</span>
+                <input id="scholarNameInput" type="text" placeholder="例如：Huiqiang Xie" value="Huiqiang Xie" />
+              </label>
+              <label class="input-group">
+                <span>研究方向</span>
+                <input id="scholarDirectionInput" type="text" placeholder="例如：Semantic Communication" value="Semantic Communication" />
+              </label>
+            </div>
+            <div class="search-actions">
+              <div class="soft-tip"></div>
+              <button id="scholarSearchBtn">查询学者论文</button>
+            </div>
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>🧾 查询结果</h3>
+              <span class="section-tag">Papers</span>
+            </div>
+            <div id="scholarPaperList" class="scholar-paper-list">
+              <div class="result-empty">暂无论文列表，请先输入学者姓名后发起查询</div>
+            </div>
+          </article>
+        </main>
+
+        <p id="statusMessage" class="status"></p>
+      </div>
+    </div>
+
+    <script src="/static/app_shell.js?v=20260620h"></script>
+    <script src="/static/scholar.js?v=20260620h"></script>
+  </body>
+</html>

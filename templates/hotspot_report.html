@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>热点监测完整输出</title>
+    <link rel="stylesheet" href="/static/style.css?v=20260620h" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="side-nav">
+        <div class="brand-block">
+          <div class="brand-mark"><img src="/static/meowscholar-avatar.png" alt="研途喵头像" /></div>
+          <div class="brand-copy">
+            <strong>研途喵</strong>
+            <span>MeowScholar</span>
+          </div>
+        </div>
+        <nav class="nav-stack">
+          <a class="nav-link" href="/profile"><span>◌</span>科研画像</a>
+          <a class="nav-link" href="/paper-search"><span>⌕</span>论文检索</a>
+          <a class="nav-link" href="/paper"><span>▣</span>论文阅读</a>
+          <a class="nav-link" href="/knowledge"><span>☰</span>知识库</a>
+          <a class="nav-link" href="/hotspot"><span>✦</span>热点监测</a>
+          <a class="nav-link" href="/direction"><span>↗</span>研究方向</a>
+          <a class="nav-link" href="/scholar"><span>◎</span>学者追踪</a>
+        </nav>
+        <div class="side-note">
+          <strong>调试页说明</strong>
+          <p>这里保留最近一次热点结果的完整文本，便于和正式看板页进行内容对照。</p>
+          <div class="side-note-actions">
+            <button class="clear-all-btn" type="button" data-clear-app-state>一键清空</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="page">
+        <header class="hero">
+          <div class="hero-copy">
+            <div class="hero-badge">Hotspot Raw Output</div>
+            <h1>热点完整输出</h1>
+            <p>这个页面不做二次拆解，直接展示最近一次热点监测返回的完整文本与基础参数，仅用于调试。</p>
+          </div>
+        </header>
+
+        <main class="stack-layout">
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>🧷 最近一次监测参数</h3>
+              <span class="section-tag">Latest</span>
+            </div>
+            <div class="hotspot-latest-grid">
+              <div class="field field-block compact-field">
+                <span>研究方向</span>
+                <strong id="latestDirection">-</strong>
+              </div>
+              <div class="field field-block compact-field">
+                <span>热点问题</span>
+                <strong id="latestQuestion">-</strong>
+              </div>
+              <div class="field field-block compact-field">
+                <span>时间范围</span>
+                <strong id="latestTimeRange">-</strong>
+              </div>
+              <div class="field field-block compact-field">
+                <span>输出形式</span>
+                <strong id="latestOutputFormat">-</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>🤖 原始输出</h3>
+              <span class="section-tag">Agent</span>
+            </div>
+            <div class="planning-block">
+              <pre id="hotspotAgentOutput" class="report report-scroll report-raw">暂无最近一次热点监测结果</pre>
+            </div>
+            <div class="report-page-actions">
+              <a class="mindmap-link" href="/hotspot">返回热点监测看板</a>
+              <a id="latestReportLink" class="mindmap-link hidden" href="#" target="_blank" rel="noopener noreferrer">
+                打开正式报告链接
+              </a>
+            </div>
+          </article>
+        </main>
+
+        <p id="statusMessage" class="status"></p>
+      </div>
+    </div>
+
+    <script src="/static/app_shell.js?v=20260620h"></script>
+    <script src="/static/hotspot_report.js?v=20260620h"></script>
+  </body>
+</html>

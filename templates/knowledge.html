@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>科研知识库</title>
+    <link rel="stylesheet" href="/static/style.css?v=20260620h" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="side-nav">
+        <div class="brand-block">
+          <div class="brand-mark"><img src="/static/meowscholar-avatar.png" alt="研途喵头像" /></div>
+          <div class="brand-copy">
+            <strong>研途喵</strong>
+            <span>MeowScholar</span>
+          </div>
+        </div>
+        <nav class="nav-stack">
+          <a class="nav-link" href="/profile"><span>◌</span>科研画像</a>
+          <a class="nav-link" href="/paper-search"><span>⌕</span>论文检索</a>
+          <a class="nav-link" href="/paper"><span>▣</span>论文阅读</a>
+          <a class="nav-link active" href="/knowledge"><span>☰</span>知识库</a>
+          <a class="nav-link" href="/hotspot"><span>✦</span>热点监测</a>
+          <a class="nav-link" href="/direction"><span>↗</span>研究方向</a>
+          <a class="nav-link" href="/scholar"><span>◎</span>学者追踪</a>
+        </nav>
+        <div class="side-note">
+          <strong>知识库说明</strong>
+          <p>这里支持论文、组会与项目内容的入库、查看与整理，方便你按不同类型持续积累和回顾科研材料。</p>
+          <div class="side-note-actions">
+            <button class="clear-all-btn" type="button" data-clear-app-state>一键清空</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="page">
+        <header class="hero">
+          <div class="hero-copy">
+            <div class="hero-badge">Knowledge Base Workspace</div>
+            <h1>科研知识库</h1>
+          <p>你的科研灵感，都在这里好好收着。</p>
+          </div>
+        </header>
+
+        <main class="stack-layout">
+          <article class="card search-panel soft-panel">
+            <div class="section-head compact-head">
+              <h3>🗃 入库入口</h3>
+              <span class="section-tag">Knowledge</span>
+            </div>
+
+            <div class="knowledge-entry-tabs" id="knowledgeEntryTabs">
+              <button class="entry-tab active" data-entry-type="paper" type="button">论文</button>
+              <button class="entry-tab" data-entry-type="meeting" type="button">组会</button>
+              <button class="entry-tab" data-entry-type="project" type="button">项目</button>
+            </div>
+
+            <div class="paper-form paper-form-refined knowledge-upload-row">
+              <div class="paper-input-group">
+                <input id="knowledgeFileInput" type="file" accept=".pdf,.doc,.docx,.md,.txt" />
+              </div>
+              <div class="paper-input-group knowledge-url-group">
+                <input id="knowledgeUrlInput" type="text" placeholder="或输入文档链接，例如：https://arxiv.org/abs/2401.00001" />
+              </div>
+              <div class="knowledge-upload-action">
+                <button id="knowledgeShowBtn" class="secondary-btn hidden" type="button">显示库内容</button>
+                <button id="knowledgeUploadBtn">上传并写入知识库</button>
+              </div>
+            </div>
+
+            <div id="paperSectionPanel" class="hidden">
+              <div class="section-head compact-head">
+                <h4>📚 论文库查看</h4>
+              </div>
+              <div class="knowledge-entry-tabs" id="paperSectionTabs">
+                <button class="entry-tab" data-section-type="innovation" type="button">创新点</button>
+                <button class="entry-tab" data-section-type="system_model" type="button">系统模型</button>
+                <button class="entry-tab" data-section-type="algorithm" type="button">算法</button>
+                <button class="entry-tab" data-section-type="dataset" type="button">数据集</button>
+                <button class="entry-tab" data-section-type="related_work" type="button">总结</button>
+              </div>
+            </div>
+
+            <div class="search-actions">
+              <div id="knowledgeActionHint" class="soft-tip">✦ 当前模式：论文入库。上传后会先写入论文库，再开启五类内容查看。</div>
+            </div>
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>📚 知识内容</h3>
+              <span class="section-tag">Records</span>
+            </div>
+            <div class="knowledge-layout knowledge-layout-single">
+              <aside class="planning-block knowledge-detail-block knowledge-detail-block-wide knowledge-detail-block-immersive">
+                <div class="knowledge-block-head">
+                  <h4 id="knowledgeDetailHeadingText">内容详情</h4>
+                </div>
+                <div class="knowledge-detail-fields knowledge-detail-fields-immersive">
+                  <strong id="knowledgeDetailTitle" class="hidden">暂无标题</strong>
+                  <strong id="knowledgeDetailContent">请先完成上传，或点击上方分区按钮查看知识库内容</strong>
+                </div>
+              </aside>
+            </div>
+          </article>
+        </main>
+
+        <p id="statusMessage" class="status"></p>
+      </div>
+    </div>
+
+    <script src="/static/app_shell.js?v=20260620h"></script>
+    <script src="/static/knowledge.js?v=20260620h"></script>
+  </body>
+</html>

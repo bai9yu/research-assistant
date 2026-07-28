@@ -1,0 +1,30 @@
+.DS_Store
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+agent/
+.venv/
+venv/
+env/
+
+# Local runtime artifacts
+outputs/
+work/
+.pycache_tmp/
+.pycache_tmp*/
+
+# Editor/system files
+.idea/
+.vscode/

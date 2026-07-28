@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>科研热点监测</title>
+    <link rel="stylesheet" href="/static/style.css?v=20260620h" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="side-nav">
+        <div class="brand-block">
+          <div class="brand-mark"><img src="/static/meowscholar-avatar.png" alt="研途喵头像" /></div>
+          <div class="brand-copy">
+            <strong>研途喵</strong>
+            <span>MeowScholar</span>
+          </div>
+        </div>
+        <nav class="nav-stack">
+          <a class="nav-link" href="/profile"><span>◌</span>科研画像</a>
+          <a class="nav-link" href="/paper-search"><span>⌕</span>论文检索</a>
+          <a class="nav-link" href="/paper"><span>▣</span>论文阅读</a>
+          <a class="nav-link" href="/knowledge"><span>☰</span>知识库</a>
+          <a class="nav-link active" href="/hotspot"><span>✦</span>热点监测</a>
+          <a class="nav-link" href="/direction"><span>↗</span>研究方向</a>
+          <a class="nav-link" href="/scholar"><span>◎</span>学者追踪</a>
+        </nav>
+        <div class="side-note">
+          <strong>热点页说明</strong>
+          <p>研途喵会帮你观察方向热度、主题变化和代表性成果，及时发现值得关注的新趋势。</p>
+          <div class="side-note-actions">
+            <button class="clear-all-btn" type="button" data-clear-app-state>一键清空</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="page">
+        <header class="hero">
+          <div class="hero-copy">
+            <div class="hero-badge">Hotspot Monitoring Workspace</div>
+            <h1>科研热点监测</h1>
+            <p>看看最近大家都在研究什么吧～</p>
+          </div>
+
+          <div class="search-panel card soft-panel">
+            <div class="section-head compact-head">
+              <h3>📡 监测参数</h3>
+              <span class="section-tag">Hotspot</span>
+            </div>
+            <div class="hotspot-single-form">
+              <label class="input-group hotspot-question-input">
+                <span>热点问题</span>
+                <input
+                  id="hotspotQuestionInput"
+                  type="text"
+                  placeholder="例如：分析语义通信近期热点和发展趋势"
+                  value="分析语义通信近期热点和发展趋势"
+                />
+              </label>
+              <button id="hotspotBtn">开始热点监测</button>
+            </div>
+          </div>
+        </header>
+
+        <main class="stack-layout">
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>🌍 热点概况</h3>
+              <span class="section-tag">Overview</span>
+            </div>
+            <section class="planning-block hotspot-overview-card">
+              <div id="hotspotOverview" class="hotspot-markdown-block">请先发起一次热点监测</div>
+            </section>
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>🔥 热点主题</h3>
+              <span class="section-tag">Topics</span>
+            </div>
+            <div id="hotTopics" class="hotspot-topic-list">
+              <div class="result-empty">暂无热点主题</div>
+            </div>
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>📈 可视化图表</h3>
+              <span class="section-tag">Charts</span>
+            </div>
+            <div class="hotspot-chart-grid">
+              <section class="planning-block chart-panel" data-chart-panel="pie">
+                <h4>来源分布</h4>
+                <div id="pieChartWrap" class="chart-embed-empty">暂无图表</div>
+              </section>
+              <section class="planning-block chart-panel" data-chart-panel="bar">
+                <h4>热点主题分布</h4>
+                <div id="barChartWrap" class="chart-embed-empty">暂无图表</div>
+              </section>
+              <section class="planning-block chart-panel" data-chart-panel="radar">
+                <h4>热点主题雷达图</h4>
+                <div id="radarChartWrap" class="chart-embed-empty">暂无图表</div>
+              </section>
+              <section class="planning-block chart-panel" data-chart-panel="line">
+                <h4>发布时间趋势</h4>
+                <div id="lineChartWrap" class="chart-embed-empty">暂无图表</div>
+              </section>
+            </div>
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>🧾 代表性检索结果</h3>
+              <span class="section-tag">Results</span>
+            </div>
+            <div id="representativeResults" class="representative-result-list">
+              <div class="result-empty">暂无代表性检索结果</div>
+            </div>
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>🗂 分析报告</h3>
+              <span class="section-tag">Report</span>
+            </div>
+            <section class="planning-block">
+              <div id="analysisReportWrap" class="hotspot-report-wrap">
+                <span class="topic-pill topic-pill-empty">尚未生成报告链接</span>
+              </div>
+            </section>
+          </article>
+        </main>
+
+        <p id="statusMessage" class="status"></p>
+      </div>
+    </div>
+
+    <script src="/static/app_shell.js?v=20260620h"></script>
+    <script src="/static/hotspot.js?v=20260620h"></script>
+  </body>
+</html>

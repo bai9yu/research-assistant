@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>研途喵</title>
+    <link rel="stylesheet" href="/static/style.css?v=20260620h" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="side-nav">
+        <div class="brand-block">
+          <div class="brand-mark"><img src="/static/meowscholar-avatar.png" alt="研途喵头像" /></div>
+          <div class="brand-copy">
+            <strong>研途喵</strong>
+            <span>MeowScholar</span>
+          </div>
+        </div>
+        <nav class="nav-stack">
+          <a class="nav-link active" href="/profile"><span>◌</span>科研画像</a>
+          <a class="nav-link" href="/paper-search"><span>⌕</span>论文检索</a>
+          <a class="nav-link" href="/paper"><span>▣</span>论文阅读</a>
+          <a class="nav-link" href="/knowledge"><span>☰</span>知识库</a>
+          <a class="nav-link" href="/hotspot"><span>✦</span>热点监测</a>
+          <a class="nav-link" href="/direction"><span>↗</span>研究方向</a>
+          <a class="nav-link" href="/scholar"><span>◎</span>学者追踪</a>
+        </nav>
+        <div class="side-note">
+          <strong>使用说明</strong>
+          <p>研途喵会帮你整理最近的论文阅读、项目进展和组会记录，看看你现在走到哪一步，也给下一步一点温柔提醒。</p>
+          <div class="side-note-actions">
+            <button class="clear-all-btn" type="button" data-clear-app-state>一键清空</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="page">
+        <header class="hero">
+          <div class="hero-copy">
+            <div class="hero-badge">Academic Portrait Workspace</div>
+            <h1>科研画像概览</h1>
+            <p>先来看看你的科研小宇宙吧～</p>
+          </div>
+          <div class="search-panel card soft-panel compact-panel">
+            <div class="section-head compact-head">
+              <h3>🌿 基础信息</h3>
+              <span class="section-tag">Profile</span>
+            </div>
+            <div class="search-grid compact-search-grid">
+              <label class="input-group">
+                <span>学号</span>
+                <input id="studentNoInput" type="text" placeholder="请输入学号，例如：20260001" value="20260001" />
+              </label>
+              <label class="input-group" id="nameGroup">
+                <span>姓名</span>
+                <input id="nameInput" type="text" placeholder="请输入姓名，例如：李予安" value="李予安" />
+              </label>
+              <label class="input-group" id="stageGroup">
+                <span>当前阶段</span>
+                <input id="stageInput" type="text" placeholder="例如：博二" value="博二" />
+              </label>
+              <label class="input-group" id="directionGroup">
+                <span>研究方向</span>
+                <input id="directionInput" type="text" placeholder="例如：语义通信" value="语义通信" />
+              </label>
+            </div>
+            <div class="search-actions">
+              <div class="soft-tip" id="searchTip"></div>
+              <button id="queryBtn">重新生成科研画像</button>
+            </div>
+            <div class="prompt-banner hidden" id="promptBanner">
+              <strong>需要补充基础信息</strong>
+              <span>当前学号未匹配到已有档案，请填写姓名、当前阶段和研究方向后再次提交。</span>
+            </div>
+          </div>
+        </header>
+
+        <main class="stack-layout">
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>📚 科研数据</h3>
+              <span class="section-tag">Metrics</span>
+            </div>
+            <div class="metrics metrics-compact metrics-warm">
+              <div class="metric metric-peach">
+                <span>近30天阅读论文</span>
+                <div class="metric-value"><strong id="readCount">0</strong><em>篇</em></div>
+              </div>
+              <div class="metric metric-cream">
+                <span>近30天收藏文献</span>
+                <div class="metric-value"><strong id="collectCount">0</strong><em>篇</em></div>
+              </div>
+              <div class="metric metric-mint">
+                <span>当前进行中项目</span>
+                <div class="metric-value"><strong id="activeProjectCount">0</strong><em>个</em></div>
+              </div>
+              <div class="metric metric-rose">
+                <span>组会记录数量</span>
+                <div class="metric-value"><strong id="meetingCount">0</strong><em>条</em></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>🧭 规划建议</h3>
+              <span class="section-tag">Planning</span>
+            </div>
+            <div class="planning-shell">
+              <div class="planning-main">
+                <section class="planning-block planning-block-summary">
+                  <h4>科研状态</h4>
+                  <p id="statusSummary">填写信息后，这里会出现一段简洁的近期科研状态总结。</p>
+                </section>
+                <section class="planning-block">
+                  <h4>主要问题</h4>
+                  <ul id="mainProblems" class="bullet-list"></ul>
+                </section>
+              </div>
+              <aside class="planning-side">
+                <section class="planning-block planning-block-sticky">
+                  <h4>行动建议</h4>
+                  <div id="actionPlan" class="action-plan-stack"></div>
+                </section>
+              </aside>
+              <section class="planning-block planning-block-recommended">
+                <h4>推荐关注方向</h4>
+                <div id="recommendedTopics" class="topic-cloud"></div>
+              </section>
+            </div>
+          </article>
+        </main>
+
+        <p id="statusMessage" class="status"></p>
+      </div>
+    </div>
+
+    <script src="/static/app_shell.js?v=20260620h"></script>
+    <script src="/static/profile.js?v=20260620h"></script>
+  </body>
+  </html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>论文阅读助手</title>
+    <link rel="stylesheet" href="/static/style.css?v=20260620h" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="side-nav">
+        <div class="brand-block">
+          <div class="brand-mark"><img src="/static/meowscholar-avatar.png" alt="研途喵头像" /></div>
+          <div class="brand-copy">
+            <strong>研途喵</strong>
+            <span>MeowScholar</span>
+          </div>
+        </div>
+        <nav class="nav-stack">
+          <a class="nav-link" href="/profile"><span>◌</span>科研画像</a>
+          <a class="nav-link" href="/paper-search"><span>⌕</span>论文检索</a>
+          <a class="nav-link active" href="/paper"><span>▣</span>论文阅读</a>
+          <a class="nav-link" href="/knowledge"><span>☰</span>知识库</a>
+          <a class="nav-link" href="/hotspot"><span>✦</span>热点监测</a>
+          <a class="nav-link" href="/direction"><span>↗</span>研究方向</a>
+          <a class="nav-link" href="/scholar"><span>◎</span>学者追踪</a>
+        </nav>
+        <div class="side-note">
+          <strong>论文页说明</strong>
+          <p>上传论文或选择推荐结果后，研途喵会帮你梳理摘要、创新点、方法思路和关键细节，让阅读不再孤单。</p>
+          <div class="side-note-actions">
+            <button class="clear-all-btn" type="button" data-clear-app-state>一键清空</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="page">
+        <header class="hero">
+          <div class="hero-copy">
+            <div class="hero-badge">Paper Reading Workspace</div>
+            <h1>论文阅读助手</h1>
+            <p>这篇论文，我们一起慢慢读。</p>
+          </div>
+        </header>
+
+        <main class="stack-layout">
+          <article class="card search-panel soft-panel">
+            <div class="section-head compact-head">
+              <h3>📄 上传论文</h3>
+              <span class="section-tag">Upload</span>
+            </div>
+            <div class="paper-form paper-form-refined">
+              <div class="paper-input-group">
+                <label for="paperFile">上传论文 PDF</label>
+                <input id="paperFile" type="file" accept=".pdf,application/pdf" />
+              </div>
+              <div class="paper-input-group">
+                <label for="paperUrlInput">上传论文 URL（可选）</label>
+                <input id="paperUrlInput" type="text" placeholder="例如：https://arxiv.org/abs/2401.00001" />
+              </div>
+              <div class="paper-action-group">
+                <button id="paperSubmitBtn">生成论文分析</button>
+                <button id="paperImportBtn" class="secondary-btn" type="button">上传到知识库</button>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="card warm-card">
+            <div class="section-head">
+              <h3>📝 论文分析面板</h3>
+              <span class="section-tag">Review</span>
+            </div>
+            <div class="paper-analysis-layout">
+              <section class="planning-block paper-overview-block">
+                <h4>论文基本信息</h4>
+                <div class="paper-overview-grid">
+                  <div class="paper-overview-item paper-overview-title">
+                    <span class="paper-overview-label">标题</span>
+                    <strong id="paperTitle">暂无标题</strong>
+                  </div>
+                  <div class="paper-overview-item paper-overview-keywords">
+                    <span class="paper-overview-label">关键词</span>
+                    <div id="paperKeywords" class="topic-cloud">
+                      <span class="topic-pill topic-pill-empty">暂无关键词</span>
+                    </div>
+                  </div>
+                  <div class="paper-overview-item paper-overview-abstract">
+                    <span class="paper-overview-label">摘要</span>
+                    <p id="paperAbstract">上传论文后将展示摘要内容</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="planning-block paper-score-block">
+                <h4>论文五维评价</h4>
+                <div id="paperScoreGrid" class="paper-score-grid">
+                  <div class="score-card">
+                    <span>创新性</span>
+                    <div class="score-stars">☆☆☆☆☆</div>
+                  </div>
+                  <div class="score-card">
+                    <span>逻辑性</span>
+                    <div class="score-stars">☆☆☆☆☆</div>
+                  </div>
+                  <div class="score-card">
+                    <span>数据可靠性</span>
+                    <div class="score-stars">☆☆☆☆☆</div>
+                  </div>
+                  <div class="score-card">
+                    <span>结论合理性</span>
+                    <div class="score-stars">☆☆☆☆☆</div>
+                  </div>
+                  <div class="score-card">
+                    <span>改进意见</span>
+                    <div class="score-stars">☆☆☆☆☆</div>
+                  </div>
+                </div>
+              </section>
+
+              <div class="paper-reading-layout">
+                <section class="planning-block paper-preview-card">
+                  <h4>论文预览</h4>
+                  <div id="paperPreviewFrame" class="paper-preview-empty">上传 PDF 后可在此滚动预览论文内容</div>
+                </section>
+
+                <aside class="planning-block paper-chat-card">
+                  <h4>AI 伴读</h4>
+                  <div id="paperChatMessages" class="paper-chat-messages">
+                    <div class="chat-bubble chat-bubble-assistant">论文准备好以后，我们就一起慢慢读。想到什么就问什么，我会一直接着你的思路往下走。</div>
+                  </div>
+                  <div class="paper-chat-input-row">
+                    <input id="paperChatInput" type="text" placeholder="例如：这篇论文最值得先抓住哪一点？" />
+                    <button id="paperChatSendBtn" type="button">发送</button>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </article>
+        </main>
+
+        <p id="statusMessage" class="status"></p>
+      </div>
+    </div>
+
+    <script src="/static/app_shell.js?v=20260620h"></script>
+    <script src="/static/paper.js?v=20260620h"></script>
+  </body>
+</html>
