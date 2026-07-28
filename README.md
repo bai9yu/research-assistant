@@ -1,5 +1,12 @@
 # 科研画像助手
 
+## 面试官访问入口
+
+- 作品集网页：`https://bai9yu.github.io/fcl/`
+- GitHub 代码仓库：`https://github.com/bai9yu/fcl`
+
+> 如果作品集网页暂时打不开，请在 GitHub 仓库的 `Settings → Pages` 中选择 `Deploy from a branch`，分支选择 `main`，目录选择 `/root`。
+
 ## 启动
 
 ```bash

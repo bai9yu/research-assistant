@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Baiyu | AI Research Tools Portfolio</title>
+    <meta
+      name="description"
+      content="AI research assistant portfolio: research profiling, paper search, reading support, knowledge base, hotspot monitoring, direction analysis, and scholar tracking."
+    />
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Portfolio home">
+        <img src="portfolio-assets/meowscholar-avatar.png" alt="" />
+        <span>Baiyu Portfolio</span>
+      </a>
+      <nav class="top-nav" aria-label="Portfolio sections">
+        <a href="#project">项目</a>
+        <a href="#modules">模块</a>
+        <a href="#stack">技术</a>
+        <a href="#links">链接</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">AI Research Tools / Product Prototype</p>
+          <h1 id="hero-title">科研画像助手作品集</h1>
+          <p class="hero-lead">
+            一个面向科研全过程的智能工作台原型，串联科研画像、论文检索、论文阅读、知识库沉淀、热点监测、研究方向分析与学者追踪。
+          </p>
+          <div class="hero-actions" id="links">
+            <a class="primary-action" href="https://github.com/bai9yu/fcl" target="_blank" rel="noreferrer">
+              查看 GitHub 代码
+            </a>
+            <a class="secondary-action" href="#project">查看项目概览</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Research assistant workflow overview">
+          <div class="orbit-card main-card">
+            <img src="portfolio-assets/meowscholar-avatar.png" alt="MeowScholar project avatar" />
+            <strong>MeowScholar</strong>
+            <span>科研辅助智能体工作台</span>
+          </div>
+          <div class="orbit-card card-a">论文检索</div>
+          <div class="orbit-card card-b">AI 伴读</div>
+          <div class="orbit-card card-c">知识沉淀</div>
+          <div class="orbit-card card-d">热点追踪</div>
+        </div>
+      </section>
+
+      <section class="overview-grid" id="project" aria-labelledby="project-title">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Project</p>
+          <h2 id="project-title">研途喵：科研画像与智能辅助平台</h2>
+        </div>
+        <article class="summary-panel">
+          <h3>项目定位</h3>
+          <p>
+            该项目以 FastAPI + 原生前端为基础，将多类科研场景统一进一个连续工作流：先识别个人科研状态，再辅助找论文、读论文、沉淀知识，并进一步观察方向热点和学者成果。
+          </p>
+        </article>
+        <article class="summary-panel">
+          <h3>我的工作</h3>
+          <p>
+            完成前后端页面组织、接口设计、Coze 智能体结果归一化、跨页面状态衔接、论文阅读与知识库流程联动，以及演示文档和视频脚本整理。
+          </p>
+        </article>
+        <article class="summary-panel">
+          <h3>展示价值</h3>
+          <p>
+            面试官可以从这个项目看到产品闭环设计、AI 工作流集成、前端交互落地、后端接口封装，以及对科研使用场景的结构化理解。
+          </p>
+        </article>
+      </section>
+
+      <section class="module-section" id="modules" aria-labelledby="modules-title">
+        <div class="section-heading">
+          <p class="eyebrow">Product Modules</p>
+          <h2 id="modules-title">从科研状态到知识沉淀的完整链路</h2>
+        </div>
+        <div class="module-grid">
+          <article class="module-card">
+            <span>01</span>
+            <h3>科研画像</h3>
+            <p>汇总科研阶段、研究方向、论文阅读、项目推进等信息，生成状态判断和下一步建议。</p>
+          </article>
+          <article class="module-card">
+            <span>02</span>
+            <h3>论文检索</h3>
+            <p>围绕研究方向返回候选论文、推荐理由和检索概述，减少人工筛选成本。</p>
+          </article>
+          <article class="module-card">
+            <span>03</span>
+            <h3>论文阅读</h3>
+            <p>支持论文上传、基础信息提取、五维评价、原文预览和 AI 伴读问答。</p>
+          </article>
+          <article class="module-card">
+            <span>04</span>
+            <h3>知识库</h3>
+            <p>将论文、组会、项目材料整理成可回顾的结构化知识条目。</p>
+          </article>
+          <article class="module-card">
+            <span>05</span>
+            <h3>热点监测</h3>
+            <p>根据方向生成热点概况、主题划分、关键发现和外部代表性链接。</p>
+          </article>
+          <article class="module-card">
+            <span>06</span>
+            <h3>方向与学者追踪</h3>
+            <p>分析研究方向结构、创新切入点，并追踪相关学者和成果线索。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="stack-section" id="stack" aria-labelledby="stack-title">
+        <div class="section-heading">
+          <p class="eyebrow">Implementation</p>
+          <h2 id="stack-title">技术实现与工程结构</h2>
+        </div>
+        <div class="stack-layout">
+          <div class="stack-list" aria-label="Technology stack">
+            <span>FastAPI</span>
+            <span>Jinja2 Templates</span>
+            <span>Vanilla JavaScript</span>
+            <span>CSS</span>
+            <span>Coze Agent API</span>
+            <span>LocalStorage</span>
+            <span>Python Service Layer</span>
+          </div>
+          <div class="repo-panel">
+            <h3>代码仓库</h3>
+            <p>
+              源码已迁移到 GitHub。仓库中保留了后端服务、页面模板、静态脚本、样式文件、接口文档和环境变量模板。
+            </p>
+            <a href="https://github.com/bai9yu/fcl" target="_blank" rel="noreferrer">打开仓库</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Baiyu Portfolio</span>
+      <a href="https://github.com/bai9yu/fcl" target="_blank" rel="noreferrer">github.com/bai9yu/fcl</a>
+    </footer>
+  </body>
+</html>
