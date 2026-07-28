@@ -205,7 +205,6 @@ h1 span {
 }
 
 .hero-shot,
-.outcome-layout figure,
 .screen-card {
   margin: 0;
   border: 1px solid rgba(220, 229, 220, 0.94);
@@ -395,24 +394,10 @@ h1 span {
   background: #eef5ef;
 }
 
-.outcome-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-  gap: 22px;
-  align-items: stretch;
-}
-
-.outcome-layout figure img {
-  width: 100%;
-  height: 100%;
-  min-height: 430px;
-  object-fit: cover;
-  object-position: top left;
-}
-
 .outcome-copy {
   display: grid;
-  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .outcome-copy div {
@@ -515,13 +500,13 @@ h1 span {
 
 @media (max-width: 1080px) {
   .hero-section,
-  .outcome-layout,
   .stack-layout {
     grid-template-columns: 1fr;
   }
 
   .problem-grid,
-  .method-grid {
+  .method-grid,
+  .outcome-copy {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -583,6 +568,7 @@ h1 span {
   .hero-metrics,
   .problem-grid,
   .method-grid,
+  .outcome-copy,
   .challenge-list,
   .screen-grid {
     grid-template-columns: 1fr;
@@ -590,10 +576,6 @@ h1 span {
 
   .screen-card.wide {
     grid-column: auto;
-  }
-
-  .outcome-layout figure img {
-    min-height: auto;
   }
 
   .site-footer {
