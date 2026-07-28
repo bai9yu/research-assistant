@@ -8,8 +8,8 @@
 
 ## 项目链接
 
-- 项目展示页：`https://bai9yu.github.io/fcl/`
-- 代码仓库：`https://github.com/bai9yu/fcl`
+- 项目展示页：`https://bai9yu.github.io/research-assistant/`
+- 代码仓库：`https://github.com/bai9yu/research-assistant`
 
 ## 功能模块
 
